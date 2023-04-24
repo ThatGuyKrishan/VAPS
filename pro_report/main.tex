@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
 % Packages for title page
 \usepackage{graphicx} % For including images
@@ -56,16 +56,184 @@ Furthermore, our solution will incorporate intelligent law enforcement helping t
 
 \section{Background}
 The problem of vehicle accidents due to driver negligence, specifically drowsy and drunk driving, has become a growing concern worldwide. These accidents result in significant loss of life, property damage, and financial burden. Despite the implementation of strict laws and regulations, many drivers continue to engage in these unsafe practices, leading to preventable accidents.
-\\ \\
+\\
+\\
 Current solutions to address this problem, such as random breath testing and driver education programs, have limitations in terms of effectiveness and scalability. Furthermore, these solutions do not provide real-time feedback to drivers, leaving room for human error and increasing the risk of accidents.
-\\ \\
+\\
+\\
 To address these issues, we propose the use of Arduino and sensors to detect drowsiness and drunk driving in real time. This solution has the potential to significantly reduce the number of accidents caused by driver negligence, making driving safer and more efficient. However, the development of such a system requires careful consideration and planning to ensure that it is reliable, accurate, and cost-effective.
-\\ \\
+\\ 
+\\
 Therefore, the problem statement for our proposed project is to design and develop a comprehensive system using Arduino and sensors that can accurately detect drowsiness and drunk driving in real-time, providing feedback to drivers to prevent accidents caused by driver negligence.
 
+\section{Component Description}
+
+\subsection{IR Sensor}
+An IR sensor, or infrared sensor, is a type of electronic component that detects infrared radiation. Infrared radiation is a form of electromagnetic radiation that has a longer wavelength than visible light and is typically emitted by heat sources. IR sensors are commonly used in a variety of applications, including remote controls, motion sensors, and temperature sensors.
+\\    
+\\
+\subsubsection{Operation}
+The basic operation of an IR sensor involves detecting changes in the intensity of infrared radiation. The sensor consists of an infrared emitter and an infrared detector, which are typically housed in a single package. The emitter generates infrared radiation, which is directed toward the object or area being monitored. The detector measures the intensity of the infrared radiation that is reflected or emitted by the object, and generates a signal that is proportional to the intensity.
+\\
+\\
+An IR LED is a type of transmitter that emits infrared radiation. This LED appears to be a standard LED, and the radiation it emits is not visible to the naked eye. Infrared receivers detect radiation primarily through the use of an infrared transmitter. Infrared receivers are available as photodiodes. IR Photodiodes differ from conventional photodiodes in that they only detect IR radiation. There are various types of infrared receivers based on voltage, wavelength, package, and so on.
+\\
+\\
+When used in conjunction with an IR transmitter and receiver, the wavelength of the receiver must equal that of the transmitter. The transmitter in this case is an IR LED, and the receiver is an IR photodiode. The infrared photodiode is sensitive to infrared light emitted by an infrared LED. The resistance of the photodiode and the change in output voltage are proportional to the amount of infrared light obtained.
+\\
+\\
+\subsubsection{Uses}
+IR sensors can be used in a variety of applications, including temperature sensing, motion detection, and remote control. In temperature sensing applications, IR sensors can be used to measure the temperature of objects without physically touching them. This is particularly useful in applications where contact temperature sensing may be impractical or unsafe, such as in medical devices or industrial settings.
+\\
+\\
+In motion detection applications, IR sensors can be used to detect the movement of people or objects. This is accomplished by detecting changes in the intensity of infrared radiation in the environment. Motion sensors are commonly used in security systems and home automation applications.
+\\
+\\
+In remote control applications, IR sensors are used to receive signals from a remote control device, such as a television remote or a garage door opener. The sensor detects the infrared radiation emitted by the remote control and translates it into a control signal that can be used to operate a device.
+\\
+\\
+There are two types of infrared sensors: active and passive. 
+
+\subsubsection{Active infrared sensors}
+An active IR sensor is a type of infrared sensor that emits infrared radiation and then detects the reflected radiation to determine the presence or absence of an object or the distance to the object. Unlike passive IR sensors, which detect changes in the heat emitted by objects, active IR sensors emit their own IR radiation and then measure the reflection to detect the presence of an object.Active IR sensors are commonly used in proximity sensors, distance measuring devices, and object detection systems. They are also used in automation and robotics applications to detect the presence of objects and to assist in navigation.
+\\
+\\
+The basic operation of an active IR sensor involves emitting a short pulse of infrared radiation and then measuring the time it takes for the reflection to return to the sensor. This time delay is used to determine the distance to the object being detected. The sensor may use a variety of different methods to emit the IR radiation, such as an LED or a laser diode.
+\\
+\\
+One of the advantages of active IR sensors is their ability to detect objects in low light conditions. Because the sensor emits its own IR radiation, it is not dependent on ambient light to detect the presence of objects. This makes active IR sensors well-suited for use in environments with low levels of ambient light, such as dark rooms or outdoor environments at night.
+\\
+\\
+Another advantage of active IR sensors is their ability to provide accurate distance measurements. By measuring the time it takes for the reflected IR radiation to return to the sensor, active IR sensors can provide highly accurate distance measurements. This makes them well-suited for use in applications where precise distance measurements are required, such as in robotics and automation applications.
+\\
+\\
+Overall, Active IR sensors are a powerful and versatile type of sensor that are well-suited for a wide range of applications. They are particularly useful in proximity sensing, distance measuring, and object detection applications. While there are challenges associated with using active IR sensors, such as interference from other sources of IR radiation, these challenges can be overcome with proper design and implementation.
+\\
+\\
+\subsubsection{Passive infrared sensors}
+A passive IR sensor is a type of infrared sensor that detects changes in the heat emitted by objects without emitting any radiation of its own. Passive IR sensors are commonly used in motion detection applications, such as security systems and automatic lighting systems.
+\\
+\\
+Passive infrared sensors are comprised of:
+\begin{itemize}
+\item Two strips of pyroelectric material (a pyroelectric sensor)
+\item An infrared filter (that blocks out all other wavelengths of light)
+\item A fresnel lens (which collects light from many angles into a single point)
+\item A housing unit (to protect the sensor from other environmental variables, such as humidity)
+\end{itemize}
+\\
+\\
+The basic operation of a passive IR sensor involves detecting changes in the heat emitted by objects in the environment. The sensor consists of a detector element, which is typically made from a material such as pyroelectric ceramic or thermopile. When the temperature of the environment changes, the detector element generates an electrical signal that is proportional to the temperature change.Passive IR sensors can detect changes in temperature as small as 0.1°C, making them well-suited for detecting the presence of humans and animals. They are also sensitive to changes in the temperature of the environment, such as the movement of air or the heating or cooling of surfaces.
+\\
+\\
+One of the advantages of passive IR sensors is their low power consumption. Because they do not emit any radiation of their own, passive IR sensors consume very little power and can operate for long periods of time on a single battery or power source.
+\\
+\\
+Another advantage of passive IR sensors is their ability to operate in a wide range of environments. Because they rely on changes in temperature to detect the presence of objects, passive IR sensors can operate in a variety of lighting conditions and are not affected by changes in ambient light levels.
+\\
+\\
+PIR sensors are most commonly used in motion-based detection applications, such as home security systems. When a moving object emitting infrared radiation enters the detector's sensing range, the difference in IR levels between the two pyroelectric elements is measured. The sensor then sends an electronic signal to an embedded computer, which causes an alarm to sound.
+\\
+\\
+Overall, passive IR sensors are a powerful and versatile type of sensor that are well-suited for motion detection and other applications where the presence of objects needs to be detected without emitting radiation of its own. While there are challenges associated with using passive IR sensors, such as susceptibility to false readings, these challenges can be overcome with proper design and implementation.
+\\
+\\
+\\
+In conclusion, IR sensors are a versatile and powerful type of electronic component that can be used in a wide range of applications. They are particularly useful in temperature sensing, motion detection, and remote control applications. While there are challenges associated with using IR sensors, such as sensitivity to ambient temperature and light conditions, these challenges can be overcome with proper calibration and temperature compensation.
+\\
+\\
+\subsection{MQ3 Alcohol Sensor}
+The MQ3 alcohol gas sensor module detects alcohol, CH4, benzene, petrol, hexane, CO, and LPG. It has a sensitive material SnO2 for detecting alcohol gas, with lower electrical conductivity in fresh air. It is a semiconductor alcohol gas sensor that detects or monitors alcohol presence or absence. It is also referred to as a chemiresistor because the sensing of the sensitive material is based on the resistance change when the sensor is exposed to alcohol gas.
+\\
+\\
+The SnO2 conductivity increases as the sensor is moved closer to the alcohol gas. The increase in sensor conductivity is proportional to the concentration of alcohol. As a result, any microcontroller can easily measure the alcohol concentration. The MQ3 alcohol gas sensor is extremely fast and sensitive to alcohol, smoke and petrol. This alcohol sensor can be used to create an alcohol detector.
+\\
+\\
+The MQ3 Alcohol Sensor is commonly used in breathalyzer devices, which are used to measure the blood alcohol content (BAC) of individuals who may be driving under the influence of alcohol. The sensor can also be used in other applications where alcohol detection is required, such as in industrial settings where alcohol is used as a solvent or in the production of beverages.
+\\
+\\
+\subsubsection{Working}
+The MQ3 Alcohol Sensor operates on a supply voltage of 5V DC and consumes approximately 150mA of current during operation. The sensor's output is an analog voltage signal that varies with the concentration of alcohol in the air. The output voltage range is typically between 0.4V and 2V, with higher voltages indicating higher concentrations of alcohol.
+\\
+\\
+The MQ3 Alcohol Sensor module is sensitive to other gases besides alcohol, so it is important to calibrate the sensor before use to ensure accurate measurements. Calibration involves exposing the sensor to a known concentration of alcohol vapors and adjusting the module's circuitry to compensate for any cross-sensitivity to other gases. The MQ3 sensor's alcohol gas sensing range in fresh air or atmosphere is 0.04mg/L-4 mg/L, which is suitable for breathalysers. It draws 150 mA and runs on a 5V power supply in temperatures ranging from -10°C to 50°C.
+\\
+\\
+The MQ3 Alcohol Sensor module can be interfaced with a microcontroller or other electronic device using analog or digital inputs. Many microcontroller platforms, such as Arduino, have libraries and examples available for interfacing with the MQ3 Alcohol Sensor module.
+\\
+\\
+One of the challenges of using the MQ3 Alcohol Sensor is that its response time can vary depending on a number of factors, such as the concentration of alcohol in the air and the temperature of the sensor. To achieve accurate and reliable measurements, it is important to allow the sensor to warm up and stabilize before taking measurements, and to account for any variation in response time when interpreting the sensor's output.
+\\
+\\
+Overall, the MQ3 Alcohol Sensor is a powerful and versatile gas sensor module that is well-suited for detecting alcohol vapors in the air. With its low power consumption and simple interface, the MQ3 Alcohol Sensor is ideal for a wide range of applications, from breathalyzer devices to industrial process monitoring. However, it is important to carefully calibrate and account for the sensor's response time and cross-sensitivity to other gases to ensure accurate and reliable measurements.
+\\
+\\
+\subsection{Bluetooth BLE Module}
+Bluetooth Low Energy (BLE) is a wireless communication technology that is designed to consume very little power while maintaining a robust and reliable connection. BLE is a subset of the Bluetooth standard, and it is intended for use in devices that require low power consumption, such as wearable devices, health monitors, and other Internet of Things (IoT) devices.
+\\
+\\
+\subsubsection{Operation}
+The BLE module is a small electronic device that contains a Bluetooth chip and other electronic components that allow it to communicate with other devices over a Bluetooth connection. BLE modules typically operate in the 2.4 GHz frequency band, which is an unlicensed band that is used for a variety of wireless communication technologies. BLE devices use a frequency hopping scheme to avoid interference from other devices in the same frequency band.
+\\
+\\
+BLE technology uses a master/slave architecture, where one device (the master) initiates the connection, and one or more devices (the slaves) respond to the master's requests. This allows the master device to control the communication between the devices and to conserve power by controlling when and how often the slaves transmit data.
+\\
+\\
+BLE modules can be programmed using a variety of programming languages and development tools. Many BLE modules come with a software development kit (SDK) that includes libraries and examples for programming the device. BLE modules can also be programmed using Arduino or other microcontroller platforms, allowing developers to create custom applications and interfaces.
+\\
+\\
+\subsubsection{Communication & Pairing}
+BLE communication is based on a set of profiles and services, which define the types of data that can be exchanged between devices. Profiles are collections of services that define a particular type of device, such as a heart rate monitor or a temperature sensor. Services are collections of characteristics that define a particular type of data, such as heart rate or temperature. Characteristics can be read, written, or notified, allowing devices to exchange data in a variety of ways.
+\\
+\\
+BLE communication is typically initiated through a process called pairing. Pairing is a secure process that allows two devices to establish a trusted connection. During pairing, the devices exchange encryption keys that are used to secure the communication between the devices. Once paired, the devices can exchange data securely and reliably.
+\\
+\\
+\subsubsection{Advantages}
+The main advantage of BLE technology is its low power consumption. BLE devices can operate for long periods of time on a single battery, making them ideal for devices that need to be portable or that require long-term monitoring. BLE devices are also designed to be highly reliable, with a robust connection that can work even in challenging environments.BLE modules can be integrated into a variety of devices, including sensors, medical devices, and home automation systems.
+\\
+\\
+Overall, Bluetooth Low Energy (BLE) is a powerful and reliable wireless communication technology that is ideal for low-power, portable devices. BLE modules are easy to integrate into a variety of devices, and they offer a secure and reliable communication channel for exchanging data. With its low power consumption and robust connection, BLE technology is well-suited for a wide range of IoT applications, including wearable devices, medical devices, and home automation systems.
+\\
+\\
+\subsection{Arduino}
+Arduino is an open-source electronics platform based on easy-to-use hardware and software. It is designed for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments. The platform consists of a programmable microcontroller, a software development environment, and a community of users and developers who share their projects and code.
+\\
+\\
+\\
+\\
+We can send a programme to the Arduino board that contains a set of instructions that can perform simple to complex tasks. Traditional programmable circuit boards necessitate the use of additional hardware to load the code onto the board. However, Arduino eliminates the need for hardware by loading code onto the Arduino board using a simple USB cable.The Arduino board enables developers to feed the program in the simplified version of the C++ language, making it easier for them to learn and code. 
+\\
+\\
+\subsubsection{Arduino Hardware}
+The Arduino's programmable circuit board is its hardware component. In our work, we have come across a variety of Arduino boards, but the most commonly used Arduino board is the Arduino UNO. The heart of the Arduino platform is the microcontroller, which is a small computer on a single integrated circuit. The microcontroller is programmed using the Arduino software development environment, which is based on the Processing programming language. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller.
+\\
+\\
+Arduino boards are available in a variety of form factors, including the Uno, Mega, Nano, and Due. These boards differ in their features and capabilities, but all are based on the Atmel AVR microcontroller. The boards typically include a USB interface for programming and serial communication, digital and analog input and output pins, and other features such as timers, interrupts, and communication interfaces.
+\\
+ \\
+\subsubsection{Arduino Software}
+The Arduino software development environment is a cross-platform software tool that is used to create, upload, and debug Arduino sketches. It is based on the Processing programming language, which is designed to make programming more accessible to artists and designers. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller. The code editor provides syntax highlighting and autocompletion features that make it easier to write code. The compiler converts the code into machine language that the microcontroller can understand. The bootloader is a small piece of code that runs on the microcontroller when it is first powered on, and it allows the microcontroller to be programmed over a serial connection.
+\\
+\\
+One of the key features of the Arduino platform is its ease of use. The software development environment and programming language are designed to be simple and accessible to beginners, while still providing powerful features for advanced users. This low cost, combined with the platform's ease of use, has made it a popular choice for educational purposes, as well as for hobbyists and professional designers.
+ \\
+ \\
+\subsubsection{Arduino Programming}
+Arduino programming is done using a high-level programming language that is similar to C and C++. The language includes a set of standard functions and libraries that make it easy to interact with the microcontroller's input and output pins, as well as other peripherals such as serial communication ports and timers. Arduino programming also includes support for interrupts, which allows the microcontroller to respond to external events in real-time.
+\\
+\\
+Aside from hardware and software, the code, also known as a sketch, is the third most important aspect of Arduino. The code can be written in the Arduino IDE and loaded onto the board. The Arduino Programming Language is a native language similar to C++. Any programme written in the Arduino Programming Language is referred to as a sketch and is saved in a file with the.ino extension.
+Arduino is made up of hardware, software, and code.
+\\
+\\
+Overall, Arduino provides a powerful and accessible platform for creating interactive electronics projects. Its ease of use, low cost, and community support make it an ideal choice for hobbyists and professionals alike. Whether you are interested in robotics, home automation, or art installations, Arduino provides a flexible and powerful platform for bringing your ideas to life.
+\\
+\\
 \section{Methodology}
 The design and development of the solution can be divided into two parts: Hardware development and Software Development. 
-\\ \\ 
+\\ 
+\\ 
 The two parts are the essential parts for the working of the entire solution.  While the hardware part is essential for the interaction of the system with humans (driver) while the software part is the decision-maker and background assisting part of the system, which helps to streamline the solution as well as make it user-friendly and cheap. 
 
 \begin{figure}[ht]
@@ -77,12 +245,17 @@ The two parts are the essential parts for the working of the entire solution.  W
 \end{figure}
 
 \subsection{Hardware Development}
-The development of the hardware for the proposed solution includes the making of a spectacle to track drowsiness and alcohol consumption by the user (driver). This developed hardware solution will be employing a low-power, open-source device Arduino for onboard data processing, an infrared sensor (IR) for eye tracking and sleep detection, and an MQ3 Alcohol sensor for alcohol detection on board. The sensors will be able continuously to track the driver for any anomaly and detect sleep or sleep-like symptoms along with the consumption of alcohol. \\ \\
-
-This entire hardware assembly will be mounted on a glass frame for demonstration purposes but can also be made into a final product similarly. The Arduino will be connected to an HC-05 Bluetooth module that can be connected to the user's smartphone device via Bluetooth. \\
-
+The development of the hardware for the proposed solution includes the making of a spectacle to track drowsiness and alcohol consumption by the user (driver). This developed hardware solution will be employing a low-power, open-source device Arduino for onboard data processing, an infrared sensor (IR) for eye tracking and sleep detection, and an MQ3 Alcohol sensor for alcohol detection on board. The sensors will be able continuously to track the driver for any anomaly and detect sleep or sleep-like symptoms along with the consumption of alcohol. 
+\\
+\\
+\\
+\\
+\\
+This entire hardware assembly will be mounted on a glass frame for demonstration purposes but can also be made into a final product similarly. The Arduino will be connected to an HC-05 Bluetooth module that can be connected to the user's smartphone device via Bluetooth. 
+\\
 Along with that, the Arduino can be programmed to trigger a separate system that can reduce the vehicle speed as well as switch on the hazard lights to indicate the potential problem with the vehicle on the road. 
-
+\\
+\\
 \subsection{Software Development}
 As important is the hardware part in our proposed solution for the detection of anomalies in the driver behaviour, the software part is also similarly important to make this proposed solution cheap and effective. \\ \\ 
 The Bluetooth module connected via Bluetooth to the user's smartphone device would be communicating with the app we will develop. This app functions as a service installed on the device and would constantly wait for the anomaly signal. As soon as the anomaly signal is detected, the app will send the Geo-location of the vehicle to our web server which will operate on the web and listen for such data. \\
@@ -95,6 +268,7 @@ However, this will cause the logistics to suffer and thus the proposed solution 
 
 % \section{Discussion}
 % \lipsum[5]
+
 
 \section{Conclusion}
 The proposed solution is expected to perform as designed and possess great potential to reduce the number of accident that happens due to problems discussed here like the sleepy driver problem and drunk driver problem. Not only it's expected to maintain the safety of the driver and others on the road, but it's also expected to help the police to maintain the law and order on the road while keeping the logistics system safe from point failure. 
