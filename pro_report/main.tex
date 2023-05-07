@@ -68,6 +68,45 @@ Therefore, the problem statement for our proposed project is to design and devel
 
 \section{Component Description}
 
+\subsection{Arduino}
+Arduino is an open-source electronics platform based on easy-to-use hardware and software. It is designed for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments. The platform consists of a programmable microcontroller, a software development environment, and a community of users and developers who share their projects and code.
+\\
+\\
+\\
+\\
+We can send a programme to the Arduino board that contains a set of instructions that can perform simple to complex tasks. Traditional programmable circuit boards necessitate the use of additional hardware to load the code onto the board. However, Arduino eliminates the need for hardware by loading code onto the Arduino board using a simple USB cable.The Arduino board enables developers to feed the program in the simplified version of the C++ language, making it easier for them to learn and code. 
+\\
+\\
+
+The Arduino Uno employs an ATmega328P microcontroller from the 8-bit AVR family, which functions at a 5 Volt level. The suggested input voltage range is 7-12V, while the acceptable range is between 6-20V. The device has six analog input pins labeled A0-A5 and fourteen digital input/output pins, six of which provide Pulse Width Modulation (PWM) output. The maximum DC current that the I/O pins can handle is 40mA, while the 3.3V pin can handle 50mA. The device has 32KB of Flash memory, 0.5KB of which is reserved for the bootloader, 2KB of Static Random Access Memory (SRAM), and 1KB of Electrically Erasable Programmable Read-Only Memory (EEPROM). The device's operating frequency is 16MHz.
+\\
+\\
+\\
+\subsubsection{Arduino Hardware}
+The Arduino's programmable circuit board is its hardware component. In our work, we have come across a variety of Arduino boards, but the most commonly used Arduino board is the Arduino UNO. The heart of the Arduino platform is the microcontroller, which is a small computer on a single integrated circuit. The microcontroller is programmed using the Arduino software development environment, which is based on the Processing programming language. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller.
+\\
+\\
+Arduino boards are available in a variety of form factors, including the Uno, Mega, Nano, and Due. These boards differ in their features and capabilities, but all are based on the Atmel AVR microcontroller. The boards typically include a USB interface for programming and serial communication, digital and analog input and output pins, and other features such as timers, interrupts, and communication interfaces.
+\\
+ \\
+\subsubsection{Arduino Software}
+The Arduino software development environment is a cross-platform software tool that is used to create, upload, and debug Arduino sketches. It is based on the Processing programming language, which is designed to make programming more accessible to artists and designers. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller. The code editor provides syntax highlighting and autocompletion features that make it easier to write code. The compiler converts the code into machine language that the microcontroller can understand. The bootloader is a small piece of code that runs on the microcontroller when it is first powered on, and it allows the microcontroller to be programmed over a serial connection.
+\\
+\\
+One of the key features of the Arduino platform is its ease of use. The software development environment and programming language are designed to be simple and accessible to beginners, while still providing powerful features for advanced users. This low cost, combined with the platform's ease of use, has made it a popular choice for educational purposes, as well as for hobbyists and professional designers.
+ \\
+ \\
+\subsubsection{Arduino Programming}
+Arduino programming is done using a high-level programming language that is similar to C and C++. The language includes a set of standard functions and libraries that make it easy to interact with the microcontroller's input and output pins, as well as other peripherals such as serial communication ports and timers. Arduino programming also includes support for interrupts, which allows the microcontroller to respond to external events in real-time.
+\\
+\\
+Aside from hardware and software, the code, also known as a sketch, is the third most important aspect of Arduino. The code can be written in the Arduino IDE and loaded onto the board. The Arduino Programming Language is a native language similar to C++. Any programme written in the Arduino Programming Language is referred to as a sketch and is saved in a file with the.ino extension.
+Arduino is made up of hardware, software, and code.
+\\
+\\
+Overall, Arduino provides a powerful and accessible platform for creating interactive electronics projects. Its ease of use, low cost, and community support make it an ideal choice for hobbyists and professionals alike. Whether you are interested in robotics, home automation, or art installations, Arduino provides a flexible and powerful platform for bringing your ideas to life.
+\\
+\\
 \subsection{IR Sensor}
 An IR sensor, or infrared sensor, is a type of electronic component that detects infrared radiation. Infrared radiation is a form of electromagnetic radiation that has a longer wavelength than visible light and is typically emitted by heat sources. IR sensors are commonly used in a variety of applications, including remote controls, motion sensors, and temperature sensors.
 \\    
@@ -110,40 +149,11 @@ Another advantage of active IR sensors is their ability to provide accurate dist
 Overall, Active IR sensors are a powerful and versatile type of sensor that are well-suited for a wide range of applications. They are particularly useful in proximity sensing, distance measuring, and object detection applications. While there are challenges associated with using active IR sensors, such as interference from other sources of IR radiation, these challenges can be overcome with proper design and implementation.
 \\
 \\
-\subsubsection{Passive infrared sensors}
-A passive IR sensor is a type of infrared sensor that detects changes in the heat emitted by objects without emitting any radiation of its own. Passive IR sensors are commonly used in motion detection applications, such as security systems and automatic lighting systems.
-\\
-\\
-Passive infrared sensors are comprised of:
-\begin{itemize}
-\item Two strips of pyroelectric material (a pyroelectric sensor)
-\item An infrared filter (that blocks out all other wavelengths of light)
-\item A fresnel lens (which collects light from many angles into a single point)
-\item A housing unit (to protect the sensor from other environmental variables, such as humidity)
-\end{itemize}
-\\
-\\
-The basic operation of a passive IR sensor involves detecting changes in the heat emitted by objects in the environment. The sensor consists of a detector element, which is typically made from a material such as pyroelectric ceramic or thermopile. When the temperature of the environment changes, the detector element generates an electrical signal that is proportional to the temperature change.Passive IR sensors can detect changes in temperature as small as 0.1°C, making them well-suited for detecting the presence of humans and animals. They are also sensitive to changes in the temperature of the environment, such as the movement of air or the heating or cooling of surfaces.
-\\
-\\
-One of the advantages of passive IR sensors is their low power consumption. Because they do not emit any radiation of their own, passive IR sensors consume very little power and can operate for long periods of time on a single battery or power source.
-\\
-\\
-Another advantage of passive IR sensors is their ability to operate in a wide range of environments. Because they rely on changes in temperature to detect the presence of objects, passive IR sensors can operate in a variety of lighting conditions and are not affected by changes in ambient light levels.
-\\
-\\
-PIR sensors are most commonly used in motion-based detection applications, such as home security systems. When a moving object emitting infrared radiation enters the detector's sensing range, the difference in IR levels between the two pyroelectric elements is measured. The sensor then sends an electronic signal to an embedded computer, which causes an alarm to sound.
-\\
-\\
-Overall, passive IR sensors are a powerful and versatile type of sensor that are well-suited for motion detection and other applications where the presence of objects needs to be detected without emitting radiation of its own. While there are challenges associated with using passive IR sensors, such as susceptibility to false readings, these challenges can be overcome with proper design and implementation.
-\\
-\\
-\\
-In conclusion, IR sensors are a versatile and powerful type of electronic component that can be used in a wide range of applications. They are particularly useful in temperature sensing, motion detection, and remote control applications. While there are challenges associated with using IR sensors, such as sensitivity to ambient temperature and light conditions, these challenges can be overcome with proper calibration and temperature compensation.
-\\
-\\
 \subsection{MQ3 Alcohol Sensor}
 The MQ3 alcohol gas sensor module detects alcohol, CH4, benzene, petrol, hexane, CO, and LPG. It has a sensitive material SnO2 for detecting alcohol gas, with lower electrical conductivity in fresh air. It is a semiconductor alcohol gas sensor that detects or monitors alcohol presence or absence. It is also referred to as a chemiresistor because the sensing of the sensitive material is based on the resistance change when the sensor is exposed to alcohol gas.
+\\
+\\
+The MQ3 Alcohol Sensor requires a power supply of 5VDC, consuming 165mA when the heater is ON and 60mA when it's OFF. The current is 150mA, and the digital output is TTL digital, represented by 0 and 1, which translates to 0.1V and 5V, respectively. The analog output ranges from 0.1V to 0.3V and correlates to the degree of pollution, voltage concentration, and has a maximum value of 4V. The sensor can detect alcohol concentration levels from 0.05 mg/L to 10 mg/L. Its interface consists of one TTL compatible input (HSW) and one TTL compatible output (ALR). The heater's power consumption is 750mW, and its resistance is 33ohms±5 percent. The device can operate within the temperature range of -10°C to 50°C (14°F to 122°F) and can be stored within the temperature range of 20°C to 70°C. The load resistance of the sensor is 200kilo ohms, and its sensitivity Rs is 5: Rs(in the air) / Rs(0.4mg/L Alcohol). The sensing resistance Rs ranges from 1Mega ohms to 8Mega ohms at 0.4mg/L alcohol concentration. The sensor's dimensions are 32x22x16mm, and its humidity must remain below 95 percent RH, while the oxygen concentration should remain at 21%. The slope rate is 0.6, and the preheating duration is 20 seconds.
 \\
 \\
 The SnO2 conductivity increases as the sensor is moved closer to the alcohol gas. The increase in sensor conductivity is proportional to the concentration of alcohol. As a result, any microcontroller can easily measure the alcohol concentration. The MQ3 alcohol gas sensor is extremely fast and sensitive to alcohol, smoke and petrol. This alcohol sensor can be used to create an alcohol detector.
@@ -172,10 +182,14 @@ Overall, the MQ3 Alcohol Sensor is a powerful and versatile gas sensor module th
 Bluetooth Low Energy (BLE) is a wireless communication technology that is designed to consume very little power while maintaining a robust and reliable connection. BLE is a subset of the Bluetooth standard, and it is intended for use in devices that require low power consumption, such as wearable devices, health monitors, and other Internet of Things (IoT) devices.
 \\
 \\
+The Bluetooth technology being used is version 2.0 + EDR, which stands for Enhanced Data Rate. The frequency used is in the 2.4 GHz ISM band, with a GFSK modulation method (Gaussian Frequency Shift Keying). The transmit power is classified as Class 2, with a maximum of 4 dBm. The typical sensitivity level is -80 dBm, and the range for open air is about 10 meters or 33 feet. Supported profiles include SPP (Serial Port Profile), HID (Human Interface Device), and others. The device operates within a voltage range of 3.3V to 5V DC, with less than 50mA of operating current, less than 2.5mA of standby current, and less than 1mA of sleep current. The device uses UART (Universal Asynchronous Receiver/Transmitter) as its interface, with a range of baud rates from 1200 to 460800. The device can operate within a temperature range of -20°C to 75°C (-4°F to 167°F).
+\\
+\\
 \subsubsection{Operation}
 The BLE module is a small electronic device that contains a Bluetooth chip and other electronic components that allow it to communicate with other devices over a Bluetooth connection. BLE modules typically operate in the 2.4 GHz frequency band, which is an unlicensed band that is used for a variety of wireless communication technologies. BLE devices use a frequency hopping scheme to avoid interference from other devices in the same frequency band.
 \\
 \\
+
 BLE technology uses a master/slave architecture, where one device (the master) initiates the connection, and one or more devices (the slaves) respond to the master's requests. This allows the master device to control the communication between the devices and to conserve power by controlling when and how often the slaves transmit data.
 \\
 \\
@@ -196,40 +210,6 @@ The main advantage of BLE technology is its low power consumption. BLE devices c
 Overall, Bluetooth Low Energy (BLE) is a powerful and reliable wireless communication technology that is ideal for low-power, portable devices. BLE modules are easy to integrate into a variety of devices, and they offer a secure and reliable communication channel for exchanging data. With its low power consumption and robust connection, BLE technology is well-suited for a wide range of IoT applications, including wearable devices, medical devices, and home automation systems.
 \\
 \\
-\subsection{Arduino}
-Arduino is an open-source electronics platform based on easy-to-use hardware and software. It is designed for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments. The platform consists of a programmable microcontroller, a software development environment, and a community of users and developers who share their projects and code.
-\\
-\\
-\\
-\\
-We can send a programme to the Arduino board that contains a set of instructions that can perform simple to complex tasks. Traditional programmable circuit boards necessitate the use of additional hardware to load the code onto the board. However, Arduino eliminates the need for hardware by loading code onto the Arduino board using a simple USB cable.The Arduino board enables developers to feed the program in the simplified version of the C++ language, making it easier for them to learn and code. 
-\\
-\\
-\subsubsection{Arduino Hardware}
-The Arduino's programmable circuit board is its hardware component. In our work, we have come across a variety of Arduino boards, but the most commonly used Arduino board is the Arduino UNO. The heart of the Arduino platform is the microcontroller, which is a small computer on a single integrated circuit. The microcontroller is programmed using the Arduino software development environment, which is based on the Processing programming language. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller.
-\\
-\\
-Arduino boards are available in a variety of form factors, including the Uno, Mega, Nano, and Due. These boards differ in their features and capabilities, but all are based on the Atmel AVR microcontroller. The boards typically include a USB interface for programming and serial communication, digital and analog input and output pins, and other features such as timers, interrupts, and communication interfaces.
-\\
- \\
-\subsubsection{Arduino Software}
-The Arduino software development environment is a cross-platform software tool that is used to create, upload, and debug Arduino sketches. It is based on the Processing programming language, which is designed to make programming more accessible to artists and designers. The software development environment includes a code editor, a compiler, and a bootloader that allows the code to be uploaded to the microcontroller. The code editor provides syntax highlighting and autocompletion features that make it easier to write code. The compiler converts the code into machine language that the microcontroller can understand. The bootloader is a small piece of code that runs on the microcontroller when it is first powered on, and it allows the microcontroller to be programmed over a serial connection.
-\\
-\\
-One of the key features of the Arduino platform is its ease of use. The software development environment and programming language are designed to be simple and accessible to beginners, while still providing powerful features for advanced users. This low cost, combined with the platform's ease of use, has made it a popular choice for educational purposes, as well as for hobbyists and professional designers.
- \\
- \\
-\subsubsection{Arduino Programming}
-Arduino programming is done using a high-level programming language that is similar to C and C++. The language includes a set of standard functions and libraries that make it easy to interact with the microcontroller's input and output pins, as well as other peripherals such as serial communication ports and timers. Arduino programming also includes support for interrupts, which allows the microcontroller to respond to external events in real-time.
-\\
-\\
-Aside from hardware and software, the code, also known as a sketch, is the third most important aspect of Arduino. The code can be written in the Arduino IDE and loaded onto the board. The Arduino Programming Language is a native language similar to C++. Any programme written in the Arduino Programming Language is referred to as a sketch and is saved in a file with the.ino extension.
-Arduino is made up of hardware, software, and code.
-\\
-\\
-Overall, Arduino provides a powerful and accessible platform for creating interactive electronics projects. Its ease of use, low cost, and community support make it an ideal choice for hobbyists and professionals alike. Whether you are interested in robotics, home automation, or art installations, Arduino provides a flexible and powerful platform for bringing your ideas to life.
-\\
-\\
 \section{Methodology}
 The design and development of the solution can be divided into two parts: Hardware development and Software Development. 
 \\ 
@@ -245,8 +225,11 @@ The two parts are the essential parts for the working of the entire solution.  W
 \end{figure}
 
 \subsection{Hardware Development}
-The development of the hardware for the proposed solution includes the making of a spectacle to track drowsiness and alcohol consumption by the user (driver). This developed hardware solution will be employing a low-power, open-source device Arduino for onboard data processing, an infrared sensor (IR) for eye tracking and sleep detection, and an MQ3 Alcohol sensor for alcohol detection on board. The sensors will be able continuously to track the driver for any anomaly and detect sleep or sleep-like symptoms along with the consumption of alcohol. 
+The development of the hardware for the proposed solution includes the making of a spectacle to track drowsiness and alcohol consumption by the user (driver). This developed hardware solution will be employing a low-power, open-source device Arduino for onboard data processing, an infrared sensor (IR) for eye tracking and sleep detection, and an MQ3 Alcohol sensor for alcohol detection on board. 
 \\
+The Arduino, IR Sensor, Alcohol Sensor and the Bluetooth Module are connected to each other as per the circuit topology given in the \ref{fig:} . The IR sensors detects obstacle in general purpose use as it emits infrared and then receives back the reflected rays, the comparator on the IR Module compares the voltage generated using the IR receiver with the voltage drop across the potentiometer thus, setting a baseline voltage value using the potentiometer. This decides the distance to which the IR sensor can sense. In our case, the IR sensor is employed to sense the rays from the eye of the driver when a beam of infrared is transmitted through the IR transmitter. When eyes are opened the received value is low as no light is being reflected back while when when the eyes are closed, the closed eyelids reflects back a portion of infrared light back to IR receiver. This sends a output of 1 or digital high into the Arduino. Similarly, the MQ3 alcohol sensor senses the presence of alcohol and converts it into voltage value and based on the presence of the amount of alcohol detected and the base value set by the potentiometer, the comparator sends digital high or digital low output to the Arduino..
+\\
+Based on the output of the sensors, the Arduino sends a deli meter byte if 1 through the connected Bluetooth module. Subsequently. the Arduino is also used to generate a ignition trigger signal which is visualized in our model as an LED but can be used to various tasks in real-life application such as speed control, switching ion the hazard lights and applying brakes of the vehicle. 
 \\
 \\
 \\
@@ -258,11 +241,11 @@ Along with that, the Arduino can be programmed to trigger a separate system that
 \\
 \subsection{Software Development}
 As important is the hardware part in our proposed solution for the detection of anomalies in the driver behaviour, the software part is also similarly important to make this proposed solution cheap and effective. \\ \\ 
-The Bluetooth module connected via Bluetooth to the user's smartphone device would be communicating with the app we will develop. This app functions as a service installed on the device and would constantly wait for the anomaly signal. As soon as the anomaly signal is detected, the app will send the Geo-location of the vehicle to our web server which will operate on the web and listen for such data. \\
-
-The web server then starts its function by trying to calculate the distance to the nearest Highway Patrol Vehicle or Police Station and will alert them through a mode of communication, for example, SMS, with the location of the affected vehicle. This helps to enforce the law and order in the area more effectively. \\
-
-However, this will cause the logistics to suffer and thus the proposed solution is that the web server will also send a message to the logistics company regarding the situation. This helps in a way that due to the reception of the information on time, the company can deploy a secondary driver to take over the charge of the vehicle and logistics, while also helping to make the legal proceedings smooth. 
+The Bluetooth module connected via Bluetooth to the user's smartphone device communicates with the app installed in the driver's app in the phone. The app waits for receiving a deli-meter byte and acts on its receivance. When a deli-meter byte is received on the app, it performs a couple of tasks starting with sending a SMS (), containing the location of the affected vehicle, to a specified phone number, generally the owner of the vehicle or the in charge of the vehicle.
+\\
+Second task it performs is the logging of data (latitude, longitude and the of anomaly) onto the online real-tie database that we have hosted using fire-base. The app was developed using MIT app inventer service that hepls in easy development of logical apps. 
+\\
+Another part of the system includes a online monitoring server that checks for the every new logged data and then finds the closest helpful service such as police vehicles, police stations etc. by comparing the latitude and longitude of the affected vehicle to the services in the database.
 % \section{Results}
 % \lipsum[4]
 
@@ -271,12 +254,134 @@ However, this will cause the logistics to suffer and thus the proposed solution 
 
 
 \section{Conclusion}
-The proposed solution is expected to perform as designed and possess great potential to reduce the number of accident that happens due to problems discussed here like the sleepy driver problem and drunk driver problem. Not only it's expected to maintain the safety of the driver and others on the road, but it's also expected to help the police to maintain the law and order on the road while keeping the logistics system safe from point failure. 
+ Our proposed project aims to address the critical issue of driver negligence, specifically drowsy and drunk driving, which has become a growing concern worldwide. We recognize the severe consequences of such accidents, including loss of life, property damage, and financial burden, and believe that our end-to-end solution can help mitigate these risks. By leveraging cutting-edge technologies such as Arduino and sensors, we can develop a comprehensive system that can accurately monitor drivers' behavior and alert them in real-time if they exhibit signs of drowsiness or impairment. Furthermore, our solution will incorporate intelligent law enforcement tools to help maintain law and order on the roads, making the roads safer for everyone while keeping the logistics system safe from point failure. Although the development of such a system requires careful consideration and planning to ensure that it is reliable, accurate, and cost-effective, our proposed solution possesses great potential to reduce the number of accidents caused by driver negligence, making driving safer and more efficient.
 
 % Add references section
 % \section*{References}
 % \addcontentsline{toc}{section}{References}
 
 % Add references here
+\section{Appendix}
+
+\subsection{Component Specification}
+\subsubsection{Arduino Uno}
+\begin{tabular}{|c|c|}
+    \hline
+    COMPONENT & SPECIFICATION \\
+    \hline
+    Microcontroller & ATmega328P – 8 bit AVR family microcontroller \\
+    \hline
+    Operating Voltage & 5V \\
+    \hline
+    Recommended Input Voltage & 7-12V \\
+    \hline
+    Input Voltage Limits & 6-20V \\
+    \hline
+    Analog Input Pins & 6 (A0 – A5) \\
+    \hline
+    Digital I/O Pins & 14 (Out of which 6 provide PWM output) \\
+    \hline
+    DC Current on I/O Pins & 40 mA \\
+    \hline   
+    DC Current on 3.3V Pin & 50 mA \\
+    \hline
+    Flash Memory & 32 KB (0.5 KB is used for Bootloader) \\
+    \hline
+    SRAM &2 KB \\
+    \hline
+    EEPROM & 1 KB \\
+    \hline
+    Frequency (Clock Speed) & 16 MHz \\
+    \hline
+\end{tabular}
+\subsubsection{IR Sensor}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Symbol & Quantity                 & Minimum & Maximum & Unit \\ \hline
+o/p    & Output Voltage           & 0       & 5       & V    \\ \hline
+Vcc    & Operating Voltage        & 4.5     & 5.5     & V    \\ \hline
+GND    & Ground Reference Voltage & -       & -       & V    \\ \hline
+\end{tabular}
+\subsubsection{MQ3 Alcohol Sensor}
+\begin{tabular}{|c|c|}
+    \hline
+     COMPONENT & SPECIFICATION  \\
+    \hline
+    power supply & 5VDC (@ 165mA heater ON / 60mA heater off). \\
+    \hline
+    Current & 150mA \\
+    \hline
+    Digital output Do& 0 and 1 TTL digital (0.1V and 5V).\\
+    \hline
+    Analog output Ao& 0.1V to 0.3V (relates to pollution), 
+    \\ & voltage concentration and maximum of 4V.\\
+    \hline
+    Alcohol Concentration detection& 0.05 mg/L to 10 mg/L.\\
+    \hline
+    Interface& one TTL compatible input(HSW) and \\ & one TTL compatible output(ALR). 
+    \\
+    \hline
+    Heater consumes& <750mW. \\
+    \hline
+    Resistance of the heater& 33ohms±5 percent. \\
+    \hline
+    Operating temperature& -10°C to 50°C (14°F to 122°F).\\
+    Storage temperature& 20°C to 70°C. \\
+    \hline
+    Load resistance & 200kilo ohms.\\
+    \hline
+    Sensitivity Rs& ≥5: Rs(in the air) / Rs(0.4mg/L Alcohol).\\
+    \hline
+    Sensing resistance Rs& 1Mega ohms to 8Mega ohms @ 0.4mg/L alcohol.\\
+    \hline
+    Sensor dimensions&32x22x16mm.\\
+    \hline
+    Humidity & less than 95 percent RH  \\
+    \hline
+    Oxygen concentration& 21 percent  \\
+    \hline
+    Slope rate& ≤0.6. \\
+    \hline
+    Preheating duration& 20seconds.\\
+    \hline
+\end{tabular}
+\subsubsection{HC-05 Bluetooth BLE Module:}
+\\
+\begin{tabular}{|c|c|}
+    \hline
+     COMPONENT & SPECIFICATION  \\
+    \hline
+     Bluetooth version & 2.0 + EDR (Enhanced Data Rate) \\
+     \hline
+     Frequency & 2.4 GHz ISM band \\
+     \hline
+     Modulation & GFSK (Gaussian Frequency Shift Keying) \\
+     \hline
+     Transmit power & Class 2 (up to 4 dBm) \\
+     \hline
+    Sensitivity & -80 dBm typical \\
+    \hline 
+    Range & approximately 10 meters (or 33 feet) in open air \\
+    \hline
+    Profiles supported & SPP (Serial Port Profile), HID (Human Interface Device) and others \\
+    \hline
+    Operating voltage & 3.3V to 5V DC \\
+    \hline
+    Operating current & less than 50mA \\
+    \hline
+    Standby current & less than 2.5mA \\
+    \hline
+    Sleep current& less than 1mA \\
+    \hline
+    Interface&  UART (Universal Asynchronous Receiver/Transmitter) \\
+    \hline
+    Baud rates& 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, and 460800 \\
+    \hline
+    Operating temperature& -20°C to 75°C (-4°F to 167°F) \\
+    \hline
+\end{tabular}
+
+
+
 
 \end{document}
